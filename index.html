@@ -16,6 +16,7 @@
         font-family: 'Josefin Slab', serif;
         color: white;
         background: #202731;
+        overflow-x: hidden;
 
       }
 
@@ -76,6 +77,44 @@
 
       }
 
+      .bubble::after {
+        content: ' ';
+        border-top-left-radius: 50% 100%;
+        border-top-right-radius: 50% 100%;
+        position: absolute;
+        bottom: 0;
+        height: 85%;
+        width: 100%;
+        background-color: #0f0f10;
+        z-index: -1;
+
+      }
+
+      .wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(131% + 1.3px);
+    height: 393px;
+    
+}
+
+.wave svg {
+    fill: #0F0F10;
+}
+
+.red > h1 + p, .red > h1 {
+    z-index: 1000;
+}
 
 
 
@@ -92,17 +131,22 @@
         <H1>Nice Curves</H1>
         <p>Delectus, est? Facere, cumque? Tempore facere, labore praesentium quod explicabo quae quo? Earum consectetur sit vero nemo accusamus tempore maiores iusto, ipsa veritatis voluptas obcaecati commodi totam corrupti illo quia.</p>
     </section>
-    <section>
+    <section  class="bubble">
         <H1>Nice Curves</H1>
         <p>Sunt quaerat cum voluptate dicta consectetur consequuntur, commodi doloribus iste perferendis repudiandae ex deleniti rem neque explicabo totam temporibus aperiam hic. Itaque veniam nulla hic, reiciendis voluptas quae iusto illo.</p>
     </section>
-    <section>
+    <section  class="dark">
         <H1>Nice Curves</H1>
         <p>Nulla, praesentium, consequatur provident voluptates tenetur quibusdam at quos perspiciatis molestias repudiandae possimus eligendi mollitia repellendus nihil. Neque provident numquam vitae eos? Repellendus, nesciunt iure dolores tempore explicabo dolore laudantium.</p>
     </section>
-    <section>
+    <section  class="red">
         <H1>Nice Curves</H1>
         <p>Accusamus quidem sunt amet praesentium. Quas, cumque incidunt quis amet neque a natus deserunt sit est impedit ullam accusamus, laboriosam quasi ab voluptas dolor odit tempore, nam placeat vero. Distinctio.</p>
+        <div class="wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
     </section>
     <section>
         <H1>Nice Curves</H1>
