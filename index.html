@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
     <title>Document</title>
 
     <style>
       body {
-          
         margin: 0;
-        font-family: 'Josefin Slab', serif;
+        font-family: "Josefin Slab", serif;
         color: white;
         background: #202731;
         overflow-x: hidden;
-
       }
 
       section {
@@ -25,8 +28,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        min-height: 400PX;
-        Padding: 100px 20vw;
+        min-height: 400px;
+        padding: 100px 20vw;
       }
 
       .blue {
@@ -53,7 +56,7 @@
       }
 
       .curve::before {
-        content: ' ';
+        content: " ";
         display: block;
         position: absolute;
         border-radius: 100% 50%;
@@ -61,7 +64,6 @@
         height: 100%;
         background-color: #202731;
         transform: translate(85%, 60%);
-
       }
 
       .curve::after {
@@ -73,12 +75,11 @@
         height: 100%;
         background-color: #3c31dd;
         transform: translate(-4%, 40%);
-        z-index:-1;
-
+        z-index: -1;
       }
 
       .bubble::after {
-        content: ' ';
+        content: " ";
         border-top-left-radius: 50% 100%;
         border-top-right-radius: 50% 100%;
         position: absolute;
@@ -87,94 +88,185 @@
         width: 100%;
         background-color: #0f0f10;
         z-index: -1;
-
       }
 
       .wave {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    
-}
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+      }
 
-.wave svg {
-    position: relative;
-    display: block;
-    width: calc(131% + 1.3px);
-    height: 393px;
-    
-}
+      .wave svg {
+        position: relative;
+        display: block;
+        width: calc(131% + 1.3px);
+        height: 393px;
+      }
 
-.wave svg {
-    fill: #0F0F10;
-}
+      .wave svg {
+        fill: #0f0f10;
+      }
 
-.red > h1 + p, .red > h1 {
-    z-index: 1000;
-}
+      .red > h1 + p,
+      .red > h1 {
+        z-index: 1000;
+      }
 
-.spacer {
-    aspect-ratio: 960/300;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
+      .spacer {
+        aspect-ratio: 960/300;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
 
-.layer1 {
-    background-image: url('/assets/layered-waves-haikei.svg');
-}
+      .layer1 {
+        background-image: url("/assets/layered-waves-haikei.svg");
+      }
 
+      .layer2 {
+        background-image: url("/assets/stacked-waves-haikei2.svg");
+      }
 
+      .flip {
+        transform: rotate(180deg);
+      }
 
+      .blob-motion {
+        position: absolute;
+        transform: translateY(-20%);
+        z-index: 1;
+      }
+
+      h1, p {
+        z-index: 1000;
+      }
     </style>
-</head>
-<body>
+  </head>
 
+  <body>
     <section class="blue">
-        <H1>Nice Curves</H1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque deleniti nostrum dolor reiciendis optio eos est aliquam laboriosam praesentium. Maiores quasi corporis error amet incidunt dolores nostrum ipsa recusandae corrupti?</p>
-        <div class="curve"></div>
+      <h1>Nice Curves</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque deleniti
+        nostrum dolor reiciendis optio eos est aliquam laboriosam praesentium.
+        Maiores quasi corporis error amet incidunt dolores nostrum ipsa
+        recusandae corrupti?
+      </p>
+      <div class="curve"></div>
     </section>
     <section>
-        <H1>Nice Curves</H1>
-        <p>Delectus, est? Facere, cumque? Tempore facere, labore praesentium quod explicabo quae quo? Earum consectetur sit vero nemo accusamus tempore maiores iusto, ipsa veritatis voluptas obcaecati commodi totam corrupti illo quia.</p>
+      <h1>Nice Curves</h1>
+      <p>
+        Delectus, est? Facere, cumque? Tempore facere, labore praesentium quod
+        explicabo quae quo? Earum consectetur sit vero nemo accusamus tempore
+        maiores iusto, ipsa veritatis voluptas obcaecati commodi totam corrupti
+        illo quia.
+      </p>
     </section>
-    <section  class="bubble">
-        <H1>Nice Curves</H1>
-        <p>Sunt quaerat cum voluptate dicta consectetur consequuntur, commodi doloribus iste perferendis repudiandae ex deleniti rem neque explicabo totam temporibus aperiam hic. Itaque veniam nulla hic, reiciendis voluptas quae iusto illo.</p>
+    <section class="bubble">
+      <h1>Nice Curves</h1>
+      <p>
+        Sunt quaerat cum voluptate dicta consectetur consequuntur, commodi
+        doloribus iste perferendis repudiandae ex deleniti rem neque explicabo
+        totam temporibus aperiam hic. Itaque veniam nulla hic, reiciendis
+        voluptas quae iusto illo.
+      </p>
     </section>
-    <section  class="dark">
-        <H1>Nice Curves</H1>
-        <p>Nulla, praesentium, consequatur provident voluptates tenetur quibusdam at quos perspiciatis molestias repudiandae possimus eligendi mollitia repellendus nihil. Neque provident numquam vitae eos? Repellendus, nesciunt iure dolores tempore explicabo dolore laudantium.</p>
+    <section class="dark">
+      <h1>Nice Curves</h1>
+      <p>
+        Nulla, praesentium, consequatur provident voluptates tenetur quibusdam
+        at quos perspiciatis molestias repudiandae possimus eligendi mollitia
+        repellendus nihil. Neque provident numquam vitae eos? Repellendus,
+        nesciunt iure dolores tempore explicabo dolore laudantium.
+      </p>
     </section>
-    <section  class="red">
-        <H1>Nice Curves</H1>
-        <p>Accusamus quidem sunt amet praesentium. Quas, cumque incidunt quis amet neque a natus deserunt sit est impedit ullam accusamus, laboriosam quasi ab voluptas dolor odit tempore, nam placeat vero. Distinctio.</p>
-        <div class="wave">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-            </svg>
-        </div>
+    <section class="red">
+      <h1>Nice Curves</h1>
+      <p>
+        Accusamus quidem sunt amet praesentium. Quas, cumque incidunt quis amet
+        neque a natus deserunt sit est impedit ullam accusamus, laboriosam quasi
+        ab voluptas dolor odit tempore, nam placeat vero. Distinctio.
+      </p>
+      <div class="wave">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
     </section>
 
     <div class="spacer layer1"></div>
 
     <section>
-        <H1>Nice Curves</H1>
-        <p>Incidunt dolorum a suscipit iure ad earum. Odio libero rem hic voluptatum sequi quae? Placeat, ullam. Fugiat hic temporibus rem aliquid maiores reprehenderit, reiciendis expedita, harum, vitae iste obcaecati amet!</p>
+      <h1>Nice Curves</h1>
+      <p>
+        Incidunt dolorum a suscipit iure ad earum. Odio libero rem hic
+        voluptatum sequi quae? Placeat, ullam. Fugiat hic temporibus rem aliquid
+        maiores reprehenderit, reiciendis expedita, harum, vitae iste obcaecati
+        amet!
+      </p>
     </section>
+
+    <div class="spacer layer2 flip"></div>
+    <section class="pink">
+      <h1>Nice Curves</h1>
+      <p>
+        Aliquam harum libero molestiae cupiditate iusto consequatur nobis
+        nostrum? Quod recusandae facilis, magni numquam officia officiis quasi!
+        Voluptates expedita veritatis, atque, ipsam accusantium dolore obcaecati
+        praesentium similique aspernatur ut voluptate!
+      </p>
+      <svg class="blob-motion"
+        id="visual"
+        viewBox="0 0 960 300"
+        width="960"
+        height="300"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+      >
+          <g transform="translate(481.71248057795185 157.32381037400387)">
+          <path id="blob1"
+            d="M62.6 -114C83.3 -96.6 103.6 -84 108.7 -65.9C113.8 -47.7 103.8 -23.8 109.8 3.5C115.9 30.8 138.1 61.7 137.3 87.4C136.5 113.1 112.7 133.6 86 138C59.3 142.4 29.7 130.7 5.9 120.5C-17.8 110.2 -35.7 101.4 -60.6 96C-85.6 90.6 -117.7 88.6 -128.1 73.1C-138.5 57.7 -127.3 28.8 -129.4 -1.2C-131.5 -31.2 -146.9 -62.5 -138 -80.5C-129.1 -98.6 -95.8 -103.4 -68.7 -117.1C-41.7 -130.8 -20.8 -153.4 0.1 -153.6C21 -153.7 42 -131.4 62.6 -114"
+            fill="#BB004B"
+          ></path>
+        </g>
+
+        <g transform="translate(472.76821547521513 154.96908101504948)" style="visibility: hidden"><path  id="blob2" d="M52.9 -92.8C74.6 -79.1 102.2 -77.1 124.1 -63.5C145.9 -50 162 -25 167.4 3.1C172.8 31.2 167.6 62.5 152 86.9C136.4 111.3 110.5 128.8 83.4 133.2C56.3 137.6 28.2 128.8 3.8 122.3C-20.7 115.8 -41.3 111.6 -59.4 102C-77.4 92.4 -92.8 77.5 -112.2 59.6C-131.5 41.7 -154.8 20.8 -155 -0.2C-155.3 -21.2 -132.7 -42.3 -115.9 -64.7C-99.2 -87.1 -88.3 -110.7 -70 -126.2C-51.7 -141.8 -25.8 -149.4 -5.1 -140.6C15.6 -131.7 31.3 -106.5 52.9 -92.8" fill="#BB004B"></path></g>
+      </svg>
+
+      <script>
+         
+        const tween = KUTE.fromTo(
+          '#blob1',
+          { path: '#blob1' },
+          { path: '#blob2' },
+          { repeat: 999, duration: 3000, yoyo: true }
+        ).start();
+      
+      </script>
+    </section>
+    <div class="spacer layer2"></div>
     <section>
-        <H1>Nice Curves</H1>
-        <p>Aliquam harum libero molestiae cupiditate iusto consequatur nobis nostrum? Quod recusandae facilis, magni numquam officia officiis quasi! Voluptates expedita veritatis, atque, ipsam accusantium dolore obcaecati praesentium similique aspernatur ut voluptate!</p>
+      <h1>Nice Curves</h1>
+      <p>
+        Inventore asperiores similique est maiores commodi culpa laboriosam
+        corporis vitae possimus modi, consequuntur qui amet perferendis sequi
+        illo omnis officiis praesentium hic molestias voluptate ipsum porro
+        sapiente voluptates facere. Eaque!
+      </p>
     </section>
-    <section>
-        <H1>Nice Curves</H1>
-        <p>Inventore asperiores similique est maiores commodi culpa laboriosam corporis vitae possimus modi, consequuntur qui amet perferendis sequi illo omnis officiis praesentium hic molestias voluptate ipsum porro sapiente voluptates facere. Eaque!</p>
-    </section>
-    
-</body>
+  </body>
 </html>
